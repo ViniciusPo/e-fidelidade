@@ -6,25 +6,27 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
 	<title>e-Fidelidade</title>
+	
+	<link rel="shortcut icon" href="/img/logo.png">
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
 	<link rel="stylesheet" href="css/main-css.css">
 	<link rel="stylesheet" href="js/QRcode/style.css">
+	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch5ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/AngularJs/angular.min.js"></script>
+	<script src="/js/Jquery/jquery-3.2.1.min.js"></script>
+	<script src="/js/Bootstrap/popper.js"></script>
+	<script src="/js/Bootstrap/bootstrap.min.js"></script>
 	
 	<script src="/js/AngularJs/angularApp.js"></script>
 	<script src="/js/Controller/cadastroPontoController.js"></script>
 	
-	<base href="/cadastro-ponto.php" />
+	<base href="/cadastro-ponto.php"/>
 	
 	<script type="text/javascript" src="js/QRcode/adapter.min.js"></script>
     <script type="text/javascript" src="js/QRcode/vue.min.js"></script>
@@ -62,7 +64,7 @@
             
             <div class="form-row">
                 <label>
-                    <span>CPF / CODE -- {{pontos.code}}</span>
+                    <span> CPF / CODE </span>
                     <input type="text" id="cpf_code" ng-model="pontos.code">
                 </label>
             </div>
