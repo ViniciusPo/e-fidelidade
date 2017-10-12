@@ -1,0 +1,12 @@
+.button-not-selected{
+    background-color: #b5afaf !important;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.button-qrcode-reader{
+    background-color: #848181 !important;
+    padding: 10px 0px !important;
+}
