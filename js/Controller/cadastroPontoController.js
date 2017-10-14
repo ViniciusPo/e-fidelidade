@@ -2,17 +2,31 @@ app.controller('cadastroPontoController', function($scope, $window, $http, $loca
 
 $scope.pontos = {};
 
+$scope.pontos.numero = 1;
+
+$scope.nomeDoRestaurante = $location.search().nomeRestaurante;
+
+$scope.mais = function(){
+    $scope.pontos.numero = $scope.pontos.numero + 1;
+}
+
+$scope.menos = function(){
+    if($scope.pontos.numero <= 1){
+        $scope.pontos.numero = 1;
+    }else{
+        $scope.pontos.numero = $scope.pontos.numero - 1;    
+    }
+}
 
 $scope.cadastrarPontuacao = function(pontos){
     
     
-    if(pontos.code.length > 0){
-        
-    }else{
-       pontos.code = $("#cpf_code").val(); 
+    if(pontos.code == undefined){
+        pontos.code = $("#cpf_code").val();
     }
+    
     pontos.idRestaurante = $location.search().idRestaurante;
-    console.log(pontos);
+    
      $http({
           method: 'POST',
           url: 'phps/cadastrar_ponto.php',

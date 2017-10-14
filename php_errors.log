@@ -1,0 +1,8 @@
+[14-Oct-2017 21:35:11 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/phps/login_shop.php on line 13
+[14-Oct-2017 21:35:11 UTC] PHP Stack trace:
+[14-Oct-2017 21:35:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login_shop.php:0
+[14-Oct-2017 21:35:11 UTC] PHP   2. mysql_query(*uninitialized*) /home/ubuntu/workspace/phps/login_shop.php:13
+[14-Oct-2017 21:35:11 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/phps/login_shop.php on line 13
+[14-Oct-2017 21:35:11 UTC] PHP Stack trace:
+[14-Oct-2017 21:35:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login_shop.php:0
+[14-Oct-2017 21:35:11 UTC] PHP   2. mysql_query(*uninitialized*) /home/ubuntu/workspace/phps/login_shop.php:13

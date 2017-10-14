@@ -3,15 +3,23 @@
 
 <head>
 
+    <title>e-Fidelidade</title>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    
-	<title>e-Fidelidade</title>
 	
-	<link rel="shortcut icon" href="/img/logo.png">
-
+	<!-- Apple configuration for Web Application -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="e-Fidelidade">
+    <link rel="apple-touch-icon" href="/img/Logo-e-Fidelidade.png">
+    <link rel="apple-touch-startup-image" href="/img/logo.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    
+    <meta name="theme-color" content="#e00505">
+	
+	<link rel="shortcut icon" href="/img/Logo-e-Fidelidade.png">
+    
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
 	<link rel="stylesheet" href="css/main-css.css">
@@ -38,7 +46,7 @@
 <body ng-app="myApp" ng-controller="cadastroPontoController">
 
 	<header>
-		<h1 style="text-align:center;width: 100%;">VAR RESTAURANTE</h1>
+		<h1 style="text-align:center;width: 100%;">{{nomeDoRestaurante}}</h1>
     </header>
 
 
@@ -54,12 +62,22 @@
 
         <form class="form-basic" method="post">
             
-            <div style="margin-bottom:20px;">
-                <h3>{{MensagemRetorno}}</h3>
+            <div style="margin-bottom:10px;">
+                <h5>{{MensagemRetorno}}</h5>
             </div>
             
             <div class="form-title-row" style="margin-bottom:20px;">
                 <h1>Cadastro de Pontuacao</h1>
+            </div>
+            
+            <div class="col-md-12 row" style="margin-bottom:20px; text-align:center;">
+                
+                <div class="col-md-3 col-1"></div>
+                <div class="col-md-6 col-10">
+                    <button class="col-md-12 button-qrcode-reader" ng-click="AbrirCamera()">Leitor QrCode </button>
+                </div>
+                <div class="col-md-3 col-1"></div>
+                
             </div>
             
             <div class="form-row">
@@ -70,36 +88,21 @@
             </div>
 
             <div class="form-row">
-                <label>
+                <label style="text-align: center;">
                     <span>Numero de pontos</span>
-                    <select name="dropdown" ng-model="pontos.numero">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-						<option value="5">5</option>
-                        <option value="6">6</option>
-                    </select>
+                    <button class="minus-plus-btn" style="background-color: #848181;" ng-click="menos()">-</button>
+                        <h5 style="margin:0px 15px;">{{pontos.numero}}</h5>
+                    <button class="minus-plus-btn" style="background-color: #848181;" ng-click="mais()" >+</button>
                 </label>
             </div>
-            
-            <div class="col-md-12 row" style="margin-bottom:40px;">
-                
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <button class="col-md-12 button-qrcode-reader" ng-click="AbrirCamera()">Leitor QrCode </button>
-                </div>
-                <div class="col-md-3"></div>
-                
-            </div>
 
-            <div class="col-md-12 row" style="margin-bottom:40px;">
+            <div class="col-md-12 col-12 row" style="margin-bottom:40px;">
                 
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-3 col-1"></div>
+                <div class="col-md-6 col-10">
                     <button class="col-md-12" ng-click="cadastrarPontuacao(pontos)">Cadastro de Pontuação</button>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-md-3 col-1"></div>
             </div>
 
         </form>

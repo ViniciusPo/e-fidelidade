@@ -2,15 +2,23 @@
 <html>
 
 <head>
+    
+    <title>e-Fidelidade</title>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<!-- Apple configuration for Web Application -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="e-Fidelidade">
+    <link rel="apple-touch-icon" href="/img/Logo-e-Fidelidade.png">
+    <link rel="apple-touch-startup-image" href="/img/logo.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    
+    <meta name="theme-color" content="#e00505">
 
-	<title>e-Fidelidade</title>
-
-    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="shortcut icon" href="/img/Logo-e-Fidelidade.png">
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">

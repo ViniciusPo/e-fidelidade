@@ -32,7 +32,8 @@ app.controller('loginController', function($scope, $window, $http) { /*global ap
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            $window.location.href = "/cadastro-ponto.php?idRestaurante="+response.data;
+            console.log(response);
+            $window.location.href = "/cadastro-ponto.php?idRestaurante="+response.data.records.id+"&nomeRestaurante="+response.data.records.name;
         });
     };
     
@@ -44,8 +45,8 @@ app.controller('loginController', function($scope, $window, $http) { /*global ap
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            console.log(response);
-            //$window.location.href = '/cadastro-ponto.php';
+            console.log();
+            $window.location.href = '/main_client.php?idUsuario='+response.data;
         });
     };
     

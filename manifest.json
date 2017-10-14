@@ -1,6 +1,7 @@
 {
     "short_name":"e-Fidelidade",
     "name":"e-Fidelidade",
+    "theme_color": "#2196F3"
     "icons":[
         {
             "src":"/img/Logo-e-Fidelidade.png",
@@ -10,5 +11,5 @@
     ],
     "start_url":"/",
     "display":"standalone",
-    "description":"Seu cartão fidelidade digital"
+    "background_color": "#e00505"
 }

@@ -16,10 +16,14 @@ $resultado = $conn->query($sql);
 
 while ($row = $resultado->fetch_assoc()) {
     $idDoCaraQueCadastro = $row["id"];
+    $nomeRestaurante = $row["Name"];
 }
 
-header('Content-Type: application/json');
-echo $idDoCaraQueCadastro;
+$dataReturn = ['id' => $idDoCaraQueCadastro , 'name' => utf8_encode($nomeRestaurante)];
 
+//$jsonEncodeReturn = json_encode(["records"=>$dataReturn], JSON_UNESCAPED_UNICODE);
+
+header('Content-Type: application/json');
+echo json_encode(["records"=>$dataReturn], JSON_UNESCAPED_UNICODE);
 
 ?>

@@ -135,3 +135,7 @@ ul li{
 .tz-link span{
 	color: #da431c;
 }
+
+video#preview.active {
+    transform: scaleX(1) !important;
+}
