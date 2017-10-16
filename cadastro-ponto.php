@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
 	<link rel="stylesheet" href="css/main-css.css">
-	<link rel="stylesheet" href="js/QRcode/style.css">
+	<!--<link rel="stylesheet" href="js/QRcode/style.css"> -->
 	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
 	
     <script src="/js/AngularJs/angular.min.js"></script>
@@ -36,19 +36,37 @@
 	
 	<base href="/cadastro-ponto.php"/>
 	
+	<script src="/js/menu.js"></script>
+	
 	<script type="text/javascript" src="js/QRcode/adapter.min.js"></script>
     <script type="text/javascript" src="js/QRcode/vue.min.js"></script>
     <script type="text/javascript" src="js/QRcode/instascan.min.js"></script>
 	
+
 	
 </head>
 
 <body ng-app="myApp" ng-controller="cadastroPontoController">
 
 	<header>
+	    <button class="sidebarBtn">
+            <span></span>
+        </button>
 		<h1 style="text-align:center;width: 100%;">{{nomeDoRestaurante}}</h1>
     </header>
-
+    
+    <div class="sidebar">
+        <ul class="list_menu">
+            <li>
+                <img src="/img/ticket.png" title="Carimbar Cartão" width="25" height="25">
+                <a href="#">Carimbar Cartão</a>
+            </li>
+            <li>
+                <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
+                <a href="index.php">Sair</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="col-md-12 cameraParaQrCode hidden" id="app">
         
