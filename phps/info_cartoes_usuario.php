@@ -1,15 +1,23 @@
 <?php
 
-$servername = "br-cdbr-azure-south-a.cloudapp.net:3306";
-$username = "b47052e290ab5f";
-$password = "6404b798";
-$dbname = "acsm_6fe25da792f37a3";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$servername = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$dbname = substr($url["path"], 1);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 $idUsuario = $_GET['idUsuario'];
+$userLongitude = $_GET['userLongitude'];
+$userLatitude = $_GET['userLatitude'];
 
+$resultArrayIndex = 0;
+$dataReturn = [];
+$dataReturn[0] = [];
+$dataReturn[1] = [];
 
 $sql = "Select 
         	SUM(a.points) as pontosUser,
@@ -26,17 +34,46 @@ $sql = "Select
 
 $resultado = $conn->query($sql);
 
-$resultArrayIndex = 0;
-$dataReturn = [];
-
 while ($row = $resultado->fetch_assoc()) {
-    $dataReturn[$resultArrayIndex] = [ 
+    $dataReturn[0][$resultArrayIndex] = [ 
                                         'idRestaurante' => $row["id"] 
                                         ,'nomeRestaurante' => utf8_encode($row["name"]) 
                                         ,'numeroPontosRestaurante' => $row["NumberOfPointsToBonus"] 
-                                        ,'imageRestaurante' => $row["Image"]
+                                        ,'imageRestaurante' => "data:image/jpeg;base64," . $row["Image"]
                                         ,'bonusRestaurante' => utf8_encode($row["Bonus"]) 
-                                        ,'pontosUsuario' => $row["pontosUser"] 
+                                        ,'pontosUsuario' => $row["pontosUser"]
+                                        ,'temBonus' => ($row["pontosUser"] >= $row["NumberOfPointsToBonus"] )
+                                    ];
+    $resultArrayIndex++;
+}
+
+$resultArrayIndex = 0;
+
+
+$sql2 = "   SELECT 
+                id,
+                name,
+                NumberOfPointsToBonus,
+                Image,
+                Bonus,
+                ( 6371 * acos( cos( radians('$userLatitude') ) * cos( radians( locations.latitude ) ) 
+                * cos( radians(locations.longitude) - radians('$userLongitude')) + sin(radians('$userLatitude')) 
+                * sin( radians(locations.latitude)))) AS distance 
+            FROM tb_shop as locations
+            HAVING distance < 10 
+            ORDER BY distance
+            LIMIT 5;";
+            
+$resultado2 = $conn->query($sql2);
+
+while ($row = $resultado2->fetch_assoc()) {
+    $dataReturn[1][$resultArrayIndex] = [ 
+                                        'idRestaurante' => $row["id"] 
+                                        ,'nomeRestaurante' => utf8_encode($row["name"]) 
+                                        ,'numeroPontosRestaurante' => $row["NumberOfPointsToBonus"] 
+                                        ,'imageRestaurante' => "data:image/jpeg;base64," . $row["Image"]
+                                        ,'bonusRestaurante' => utf8_encode($row["Bonus"])
+                                        ,'distancia' => $row["distance"]
                                     ];
     $resultArrayIndex++;
 }

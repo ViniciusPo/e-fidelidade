@@ -15,9 +15,14 @@ h5 {
 
 .bloco-restaurante{
 	border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
+    background-color: rgba(156, 39, 176, 0.13);
+    margin-left: 5px !important;
 }	
 
+.cartao-completo{
+    border:2px solid gold;
+}
 
 html{
 	background-color: #efefef;

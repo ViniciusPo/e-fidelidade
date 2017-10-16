@@ -6,3 +6,64 @@
 [14-Oct-2017 21:35:11 UTC] PHP Stack trace:
 [14-Oct-2017 21:35:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login_shop.php:0
 [14-Oct-2017 21:35:11 UTC] PHP   2. mysql_query(*uninitialized*) /home/ubuntu/workspace/phps/login_shop.php:13
+[16-Oct-2017 01:49:14 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1226): User 'b47052e290ab5f' has exceeded the 'max_user_connections' resource (current value: 4) in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 9
+[16-Oct-2017 01:49:14 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:14 UTC] PHP   2. mysqli->mysqli(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:9
+[16-Oct-2017 01:49:14 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 27
+[16-Oct-2017 01:49:14 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:14 UTC] PHP   2. mysqli->query(*uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:27
+[16-Oct-2017 01:49:14 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 32
+[16-Oct-2017 01:49:14 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:27 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1226): User 'b47052e290ab5f' has exceeded the 'max_user_connections' resource (current value: 4) in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 9
+[16-Oct-2017 01:49:27 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:27 UTC] PHP   2. mysqli->mysqli(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:9
+[16-Oct-2017 01:49:27 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 27
+[16-Oct-2017 01:49:27 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:27 UTC] PHP   2. mysqli->query(*uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:27
+[16-Oct-2017 01:49:27 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 32
+[16-Oct-2017 01:49:27 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:57 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1226): User 'b47052e290ab5f' has exceeded the 'max_user_connections' resource (current value: 4) in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 9
+[16-Oct-2017 01:49:57 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:57 UTC] PHP   2. mysqli->mysqli(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:9
+[16-Oct-2017 01:49:57 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 27
+[16-Oct-2017 01:49:57 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 01:49:57 UTC] PHP   2. mysqli->query(*uninitialized*) /home/ubuntu/workspace/phps/info_cartoes_usuario.php:27
+[16-Oct-2017 01:49:57 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 32
+[16-Oct-2017 01:49:57 UTC] PHP Stack trace:
+[16-Oct-2017 01:49:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 14:29:27 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/phps/login.php on line 22
+[16-Oct-2017 14:29:27 UTC] PHP Stack trace:
+[16-Oct-2017 14:29:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:29:27 UTC] PHP   2. mysqli->mysqli(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/phps/login.php:22
+[16-Oct-2017 14:29:27 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/phps/login.php on line 30
+[16-Oct-2017 14:29:27 UTC] PHP Stack trace:
+[16-Oct-2017 14:29:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:29:27 UTC] PHP   2. mysqli->query(*uninitialized*) /home/ubuntu/workspace/phps/login.php:30
+[16-Oct-2017 14:29:27 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/login.php on line 32
+[16-Oct-2017 14:29:27 UTC] PHP Stack trace:
+[16-Oct-2017 14:29:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:29:30 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 32
+[16-Oct-2017 14:29:30 UTC] PHP Stack trace:
+[16-Oct-2017 14:29:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[16-Oct-2017 14:32:51 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1045): Access denied for user 'bd124ab815496a'@'localhost' (using password: YES) in /home/ubuntu/workspace/phps/login.php on line 22
+[16-Oct-2017 14:32:51 UTC] PHP Stack trace:
+[16-Oct-2017 14:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:32:51 UTC] PHP   2. mysqli->mysqli(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /home/ubuntu/workspace/phps/login.php:22
+[16-Oct-2017 14:32:51 UTC] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/ubuntu/workspace/phps/login.php on line 30
+[16-Oct-2017 14:32:51 UTC] PHP Stack trace:
+[16-Oct-2017 14:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:32:51 UTC] PHP   2. mysqli->query(*uninitialized*) /home/ubuntu/workspace/phps/login.php:30
+[16-Oct-2017 14:32:51 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/login.php on line 32
+[16-Oct-2017 14:32:51 UTC] PHP Stack trace:
+[16-Oct-2017 14:32:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login.php:0
+[16-Oct-2017 14:32:59 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 32
+[16-Oct-2017 14:32:59 UTC] PHP Stack trace:
+[16-Oct-2017 14:32:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0

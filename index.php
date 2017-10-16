@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-title" content="e-Fidelidade">
     <link rel="apple-touch-icon" href="/img/Logo-e-Fidelidade.png">
     <link rel="apple-touch-startup-image" href="/img/logo.png">
-    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#9c27b0">
     
     <meta name="theme-color" content="#9c27b0">
 
