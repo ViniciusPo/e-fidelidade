@@ -38,8 +38,11 @@
 	<link rel="manifest" href="/manifest.json">
 
 </head>
-<body>
+<body ng-app="myApp" ng-controller="loginController">
     
+    <div id="loading" ng-show="isLoading">
+		<img id="loading-image" src="/img/Facebook.gif" alt="Loading..." />
+	</div>
         
 	<header>
 		<h1 style="text-align:center;width: 100%;">E-fidelidade</h1>
@@ -47,7 +50,7 @@
     
     
     
-    <div class="main-content col-md-12" ng-app="myApp" ng-controller="loginController">
+    <div class="main-content col-md-12" >
 
         <!-- You only need this form and the form-basic.css -->
 

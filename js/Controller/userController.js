@@ -1,5 +1,8 @@
 app.controller('userController', function($scope, $window, $http, $location) { /*global app*/
 
+
+$scope.isLoading = true;
+
 $scope.idUsuario = $location.search().idUsuario;
 console.log($scope.idUsuario);
 
@@ -26,6 +29,8 @@ $scope.getAllShopInformation = function(){
             $scope.cartoesFidelidade = response.data.records[0];
             $scope.restaurantesProximos = response.data.records[1];
             console.log(response);
+            
+            $scope.isLoading = false;
         });
     }
     

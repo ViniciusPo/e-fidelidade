@@ -46,6 +46,10 @@
 
 <body ng-app="myApp" ng-controller="userController">
 	
+	<div id="loading" ng-show="isLoading">
+		<img id="loading-image" src="/img/Facebook.gif" alt="Loading..." />
+	</div>
+	
 	<header>
 		<h1 style="text-align:center;width: 100%;">e-Fidelidade</h1>
     </header>
@@ -63,16 +67,16 @@
 			<div class="form-row col-md-12" ng-hide="cartoesFidelidade.length < 1 || cartoesFidelidade[0].idRestaurante == null" ng-repeat="x in cartoesFidelidade">
 				<div class="col-md-12 col-12">
 					<div class="bloco-restaurante col-md-12 col-12 row" ng-class="{ 'cartao-completo': x.temBonus }" style="text-align: center;">
-						<div class="col-md-3 col-5">
+						<div class="col-md-3 col-sm-3 col-5">
 							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{x.imageRestaurante}}" />
 						</div>
 						
-						<div class="col-md-7 col-7">
+						<div class="col-md-7 col-sm-7 col-7">
 							<h4> {{x.nomeRestaurante}}  </h4>
 							<label style="margin-top: 5px;margin-bottom: 15px;color: grey;">{{x.bonusRestaurante}}</label>
 						</div>
 						
-						<div class="col-md-2 col-12">
+						<div class="col-md-2 col-sm-2 col-12">
 							<label class=""> {{x.pontosUsuario}} </label>
 							<label class="">/</label>
 							<label class=""> {{x.numeroPontosRestaurante}} </label>
@@ -97,7 +101,7 @@
             <div class="form-row col-md-12" ng-hide="restaurantesProximos.length < 1 || restaurantesProximos[0].idRestaurante == null" ng-repeat="y in restaurantesProximos">
 				<div class="col-md-12 col-12">
 					<div class="bloco-restaurante col-md-12 col-12 row" style="text-align: center;">
-						<div class="col-md-3 col-5">
+						<div class="col-md-3 col-sm-3 col-5">
 							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{y.imageRestaurante}}" />
 						</div>
 						
@@ -106,7 +110,7 @@
 							<i class="fa fa-gift"></i><label style="margin-top: 5px;margin-bottom: 15px;color: grey;">  {{y.bonusRestaurante}}</label>
 						</div>
 						
-						<div class="col-md-2 col-12">
+						<div class="col-md-2 col-sm-2 col-12">
 							
 							<label class=""> {{y.distancia | number:3}} km </label>
 							

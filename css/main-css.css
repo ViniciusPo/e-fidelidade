@@ -125,3 +125,21 @@ ul li {
     top:0;
     transform:rotate(-45deg);
 }
+
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 0.95;
+   background-color: #000;
+   z-index: 99;
+   text-align: center;
+}
+
+#loading-image {
+  margin-top: 190px;
+  z-index: 100;
+}

@@ -26,6 +26,8 @@
 	<!--<link rel="stylesheet" href="js/QRcode/style.css"> -->
 	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
 	
+	<link rel="stylesheet" href="/css/FontAwesome/css/font-awesome.min.css">
+	
     <script src="/js/AngularJs/angular.min.js"></script>
 	<script src="/js/Jquery/jquery-3.2.1.min.js"></script>
 	<script src="/js/Bootstrap/popper.js"></script>
@@ -47,6 +49,10 @@
 </head>
 
 <body ng-app="myApp" ng-controller="cadastroPontoController">
+
+    <div id="loading" ng-show="isLoading">
+		<img id="loading-image" src="/img/Facebook.gif" alt="Loading..." />
+	</div>
 
 	<header>
 	    <button class="sidebarBtn">

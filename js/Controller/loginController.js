@@ -2,8 +2,8 @@ app.controller('loginController', function($scope, $window, $http) { /*global ap
 
     $scope.login = {};
     $scope.login.name= "45167533830";
-    $scope.login.password= "Doe";
-    
+    $scope.login.password= "SenhaNaoFunciona";
+    $scope.isLoading = false;
     
     
     $scope.SelectEmpresa = function() {
@@ -25,20 +25,19 @@ app.controller('loginController', function($scope, $window, $http) { /*global ap
     
     
     $scope.LoginAppEmpresa = function(login){
-        console.log(login);
+        $scope.isLoading = true;
          $http({
           type: 'GET',
           url: 'phps/login_shop.php',
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            console.log(response);
             $window.location.href = "/cadastro-ponto.php?idRestaurante="+response.data.records.id+"&nomeRestaurante="+response.data.records.name;
         });
     };
     
     $scope.LoginAppClient = function(login){
-        console.log(login);
+        $scope.isLoading = true;
         $http({
           type: 'GET',
           url: 'phps/login.php',

@@ -2,6 +2,8 @@ app.controller('cadastroPontoController', function($scope, $window, $http, $loca
 
 $scope.pontos = {};
 
+$scope.isLoading = true;
+
 $scope.pontos.numero = 1;
 
 $scope.nomeDoRestaurante = $location.search().nomeRestaurante;
@@ -20,6 +22,7 @@ $scope.menos = function(){
 
 $scope.cadastrarPontuacao = function(pontos){
     
+    $scope.isLoading = true;
     
     if(pontos.code == undefined){
         pontos.code = $("#cpf_code").val();
@@ -37,7 +40,7 @@ $scope.cadastrarPontuacao = function(pontos){
           headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).then(function (response) {
             $scope.MensagemRetorno = response.data;
-            //$window.location.href = '/cadastro-ponto.php';
+            $scope.isLoading = false;
         });
     
 };
@@ -57,5 +60,7 @@ $scope.QrCodeReaded = function(){
     $scope.pontos.code = $scope.qrCodeScan;
     
 }
-    
+
+$scope.isLoading = false;
+
 });
