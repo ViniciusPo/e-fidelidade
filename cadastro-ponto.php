@@ -16,7 +16,7 @@
     <link rel="apple-touch-startup-image" href="/img/logo.png">
     <meta name="apple-mobile-web-app-status-bar-style" content="red">
     
-    <meta name="theme-color" content="#e00505">
+    <meta name="theme-color" content="#9c27b0">
 	
 	<link rel="shortcut icon" href="/img/Logo-e-Fidelidade.png">
     
