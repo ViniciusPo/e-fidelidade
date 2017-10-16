@@ -39,12 +39,14 @@
 
 </head>
 <body>
+    
         
 	<header>
 		<h1 style="text-align:center;width: 100%;">E-fidelidade</h1>
     </header>
-
-
+    
+    
+    
     <div class="main-content col-md-12" ng-app="myApp" ng-controller="loginController">
 
         <!-- You only need this form and the form-basic.css -->
