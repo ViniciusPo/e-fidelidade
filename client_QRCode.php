@@ -71,7 +71,7 @@
     
     <div class="main-content col-md-12">
         <center>
-            <img src="/img/code_ejwkh.png" title="ejwkh" width="400" height="400"><br/>
+            <img src="/img/code_ejwkh.png" title="ejwkh" width="60%" height="60%"><br/>
             <h2 style="margin-bottom:10px;">ejwkh</h2> 
         </center>
     </div>
