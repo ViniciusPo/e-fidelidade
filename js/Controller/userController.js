@@ -34,7 +34,7 @@ $scope.getAllShopInformation = function(){
         });
     }
     
-    
+    $scope.isLoading = false;
     
 };
 
