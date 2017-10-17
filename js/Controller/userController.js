@@ -4,6 +4,7 @@ app.controller('userController', function($scope, $window, $http, $location) { /
 $scope.isLoading = true;
 
 $scope.idUsuario = $location.search().idUsuario;
+
 console.log($scope.idUsuario);
 
 $scope.getAllShopInformation = function(){
@@ -38,6 +39,10 @@ $scope.getAllShopInformation = function(){
     
 };
 
+
+$scope.paginaRestaurante = function(idDoRestaurante){
+    $window.location.href = "/tela_restaurante.html?idRestaurante="+idDoRestaurante+"&idUsuario="+$scope.idUsuario;
+}
 
 
 $scope.getAllShopInformation();

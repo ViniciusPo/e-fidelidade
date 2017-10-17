@@ -33,7 +33,7 @@
 	<script src="/js/Bootstrap/bootstrap.min.js"></script>
 	
 	<script src="/js/AngularJs/angularApp.js"></script>
-	<script src="/js/Controller/userController.js"></script>
+	<script src="/js/Controller/qrCodeController.js"></script>
 	
 	<base href="/main_client.php"/>
 	
@@ -43,8 +43,11 @@
 	
 	<link rel="manifest" href="/manifest.json">
 	
+	
+	
 
 </head>
+<body ng-app="myApp" ng-controller="qrCodeController">
     <header>
 		<button class="sidebarBtn">
             <span></span>

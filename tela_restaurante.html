@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>e-Fidelidade</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Apple configuration for Web Application -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="e-Fidelidade">
+    <link rel="apple-touch-icon" href="/img/Logo-e-Fidelidade.png">
+    <link rel="apple-touch-startup-image" href="/img/logo.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    
+    <meta name="theme-color" content="#9c27b0">
+	
+	<link rel="shortcut icon" href="/img/Logo-e-Fidelidade.png">
+    
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-basic.css">
+	<link rel="stylesheet" href="css/main-css.css">
+	<!--<link rel="stylesheet" href="js/QRcode/style.css"> -->
+	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="/css/FontAwesome/css/font-awesome.min.css">
+	
+    <script src="/js/AngularJs/angular.min.js"></script>
+	<script src="/js/Jquery/jquery-3.2.1.min.js"></script>
+	<script src="/js/Bootstrap/popper.js"></script>
+	<script src="/js/Bootstrap/bootstrap.min.js"></script>
+	
+	<script src="/js/AngularJs/angularApp.js"></script>
+	<script src="/js/Controller/telaRestauranteController.js"></script>
+	
+	<base href="/tela_restaurante.html"/>
+	
+	<script src="/js/menu.js"></script>
+	
+</head>
+
+<body ng-app="myApp" ng-controller="telaRestauranteController">
+
+    <div id="loading" ng-show="isLoading">
+		<img id="loading-image" src="/img/Facebook.gif" alt="Loading..." />
+	</div>
+
+	<header style="padding:25px;">
+	    <button class="sidebarBtn" style="margin-top:0;">
+            <span></span>
+        </button>
+    </header>
+    
+    <div class="sidebar">
+        <ul class="list_menu">
+            <li>
+                <img src="/img/ticket.png" title="Carimbar Cartão" width="25" height="25">
+                <a href="#">Carimbar Cartão</a>
+            </li>
+            <li>
+                <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
+                <a href="index.php">Sair</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content col-md-12" style="text-align:center;">
+        
+        <div class="col-md-12">
+			<img style="width: 90%; height: 12em; object-fit: cover"  ng-src="{{imageRestaurante}}" />
+			<p class="p-dentro-de-image">{{nomeRestaurante}}</p>
+        </div>
+
+        <form class="form-basic" method="post">
+            
+            <div style="margin-top:-40px;margin-bottom: 50px;">
+                <div style="float:right;">
+                    <label>Preço : 
+                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+                    </label>    
+                </div>
+                
+                <div style="float:right; margin-right:10px;">
+                    <label>Avaliação : 
+                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+                        <i class="fa fa-star" aria-hidden="true" style="color:#c1c1c1"></i>
+                    </label>    
+                </div>
+            </div>
+            
+            <h6>{{enderecoRestaurante}}</h6>
+            
+            <div id="map" style="width:100%;height:250px;background:yellow"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+            
+            
+            <div id="container" class="cartao-fidelidade" ng-style="cardBack">
+                <div class="ponto-do-cartao {{i.classe}}" ng-style="widthBolhasCartao" ng-repeat="i in numberOfCircles track by $index" ></div>
+            </div>
+            
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -188,3 +188,4 @@
 [17-Oct-2017 02:18:35 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/login_shop.php on line 19
 [17-Oct-2017 02:18:35 UTC] PHP Stack trace:
 [17-Oct-2017 02:18:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login_shop.php:0
+[17-Oct-2017 16:15:07 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/phps/info_restaurante.php on line 32

@@ -87,7 +87,7 @@
                 <h1>Seus cartões</h1>
             </div>
 			<div class="form-row col-md-12" ng-hide="cartoesFidelidade.length < 1 || cartoesFidelidade[0].idRestaurante == null" ng-repeat="x in cartoesFidelidade">
-				<div class="col-md-12 col-12">
+				<div class="col-md-12 col-12" ng-click="paginaRestaurante(x.idRestaurante)">
 					<div class="bloco-restaurante col-md-12 col-12 row" ng-class="{ 'cartao-completo': x.temBonus }" style="text-align: center;">
 						<div class="col-md-3 col-sm-3 col-5">
 							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{x.imageRestaurante}}" />
@@ -121,7 +121,7 @@
             
             
             <div class="form-row col-md-12" ng-hide="restaurantesProximos.length < 1 || restaurantesProximos[0].idRestaurante == null" ng-repeat="y in restaurantesProximos">
-				<div class="col-md-12 col-12">
+				<div class="col-md-12 col-12" ng-click="paginaRestaurante(y.idRestaurante)">
 					<div class="bloco-restaurante col-md-12 col-12 row" style="text-align: center;">
 						<div class="col-md-3 col-sm-3 col-5">
 							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{y.imageRestaurante}}" />
