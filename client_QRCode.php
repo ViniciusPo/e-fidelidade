@@ -49,7 +49,7 @@
 		<button class="sidebarBtn">
             <span></span>
         </button>
-		<h1 style="text-align:center;width: 100%;">e-Fidelidade</h1>
+		<h1 style="text-align:center;width: 100%;">QR Code</h1>
     </header>
     
     <div class="sidebar">
@@ -71,7 +71,7 @@
     
     <div class="main-content col-md-12">
         <center>
-            <h1 style="margin-top:30px;"> QR Code</h1> <br/>
-            <img src="/img/code_ejwkh.png" title="ejwkh" width="400" height="400">
+            <img src="/img/code_ejwkh.png" title="ejwkh" width="400" height="400"><br/>
+            <h2 style="margin-bottom:10px;">ejwkh</h2> 
         </center>
     </div>
