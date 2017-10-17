@@ -37,6 +37,8 @@
 	
 	<base href="/main_client.php"/>
 	
+	<script src="/js/menu.js"></script>
+	
 	<script src="/js/ServiceWorkers/serviceWorker.js"></script>
 	
 	<link rel="manifest" href="/manifest.json">
@@ -51,8 +53,28 @@
 	</div>
 	
 	<header>
+		<button class="sidebarBtn">
+            <span></span>
+        </button>
 		<h1 style="text-align:center;width: 100%;">e-Fidelidade</h1>
     </header>
+    
+    <div class="sidebar">
+        <ul class="list_menu">
+        	<li>
+                <img src="/img/icon_home.png" title="Home" width="25" height="25">
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <img src="/img/qr_code_icon.png" title="QR Code" width="25" height="25">
+                <a href="client_QRCode.php">QR Code</a>
+            </li>
+            <li>
+                <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
+                <a href="index.php">Sair</a>
+            </li>
+        </ul>
+    </div>
 
 
     <div class="main-content">

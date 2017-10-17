@@ -60,7 +60,7 @@ $sql2 = "   SELECT
                 * cos( radians(locations.longitude) - radians('$userLongitude')) + sin(radians('$userLatitude')) 
                 * sin( radians(locations.latitude)))) AS distance 
             FROM tb_shop as locations
-            HAVING distance < 10 
+            HAVING distance < 1000 
             ORDER BY distance
             LIMIT 5;";
             
