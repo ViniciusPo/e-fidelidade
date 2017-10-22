@@ -189,3 +189,23 @@
 [17-Oct-2017 02:18:35 UTC] PHP Stack trace:
 [17-Oct-2017 02:18:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/login_shop.php:0
 [17-Oct-2017 16:15:07 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/phps/info_restaurante.php on line 32
+[20-Oct-2017 22:27:08 UTC] PHP Warning:  pg_fetch_assoc() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/phps/getClientCode.php on line 24
+[20-Oct-2017 22:27:08 UTC] PHP Stack trace:
+[20-Oct-2017 22:27:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
+[20-Oct-2017 22:27:08 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24
+[20-Oct-2017 22:28:40 UTC] PHP Warning:  pg_fetch_assoc() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/phps/getClientCode.php on line 24
+[20-Oct-2017 22:28:40 UTC] PHP Stack trace:
+[20-Oct-2017 22:28:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
+[20-Oct-2017 22:28:40 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24
+[20-Oct-2017 22:31:47 UTC] PHP Warning:  pg_fetch_assoc() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/phps/getClientCode.php on line 24
+[20-Oct-2017 22:31:47 UTC] PHP Stack trace:
+[20-Oct-2017 22:31:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
+[20-Oct-2017 22:31:47 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24
+[20-Oct-2017 22:31:52 UTC] PHP Warning:  pg_fetch_assoc() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/phps/getClientCode.php on line 24
+[20-Oct-2017 22:31:52 UTC] PHP Stack trace:
+[20-Oct-2017 22:31:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
+[20-Oct-2017 22:31:52 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24
+[20-Oct-2017 22:33:00 UTC] PHP Warning:  pg_fetch_assoc() expects parameter 1 to be resource, object given in /home/ubuntu/workspace/phps/getClientCode.php on line 24
+[20-Oct-2017 22:33:00 UTC] PHP Stack trace:
+[20-Oct-2017 22:33:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
+[20-Oct-2017 22:33:00 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24

@@ -44,6 +44,10 @@ $scope.paginaRestaurante = function(idDoRestaurante){
     $window.location.href = "/tela_restaurante.html?idRestaurante="+idDoRestaurante+"&idUsuario="+$scope.idUsuario;
 }
 
+$scope.goToQrCode = function(){
+    $window.location.href = "/client_QRCode.php?idUsuario="+$scope.idUsuario;
+}
+
 
 $scope.getAllShopInformation();
     
