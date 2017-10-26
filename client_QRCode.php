@@ -27,15 +27,18 @@
 	
 	<link rel="stylesheet" href="/css/FontAwesome/css/font-awesome.min.css">
 	
-	<script src="/js/AngularJs/angular.min.js"></script>
 	<script src="/js/Jquery/jquery-3.2.1.min.js"></script>
 	<script src="/js/Bootstrap/popper.js"></script>
 	<script src="/js/Bootstrap/bootstrap.min.js"></script>
 	
-	<script src="/js/AngularJs/angularApp.js"></script>
-	<script src="/js/Controller/qrCodeController.js"></script>
 	
-	<base href="/main_client.php"/>
+	<base href="/client_QRCode.php"/>
+	
+	<!-- https://github.com/jeromeetienne/jquery-qrcode -->
+    <script type="text/javascript" src="/js/QRCodeGenerator/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/QRCodeGenerator/qrcode.js"></script>
+    
+    <script type="text/javascript" src="/js/QRCodeGenerator/client_QRCode.js"></script>
 	
 	<script src="/js/menu.js"></script>
 	
@@ -74,7 +77,9 @@
     
     <div class="main-content col-md-12">
         <center>
-            <img src="/img/code_ejwkh.png" title="ejwkh" width="60%" height="60%"><br/>
-            <h2 style="margin-bottom:10px;">ejwkh</h2> 
+            <div id="qrcode" style="margin: 30px;"></div>
+            
+            
+            <h2 id="codigo" style="margin-bottom:10px;"></h2> 
         </center>
     </div>

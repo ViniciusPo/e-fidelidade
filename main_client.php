@@ -67,7 +67,7 @@
             </li>
             <li>
                 <img src="/img/qr_code_icon.png" title="QR Code" width="25" height="25">
-                <a href="client_QRCode.php">QR Code</a>
+                <a ng-click="goToQrCode()" href="client_QRCode.php">QR Code</a>
             </li>
             <li>
                 <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
