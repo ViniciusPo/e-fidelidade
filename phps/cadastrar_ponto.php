@@ -26,7 +26,7 @@ while ($row = $resultado->fetch_assoc()) {
 }
 
 
-$sqlInsert = "INSERT INTO tb_resgiter_benefits (id_user,id_shop,isActive,Registration_date,points)
+$sqlInsert = "INSERT INTO tb_register_benefits (id_user,id_shop,isActive,Registration_date,points)
 VALUES($idClient,$idShop,1,NOW(),$numPontos);";
 
 if ($conn->query($sqlInsert) === TRUE) {

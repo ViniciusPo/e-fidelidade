@@ -21,7 +21,7 @@ $sql = "Select
             sum(a.points) as pontosUser
         from 
         	tb_shop as s
-        		left join tb_resgiter_benefits as a ON s.id = a.id_shop and a.id_user = '$idUsuario'
+        		left join tb_register_benefits as a ON s.id = a.id_shop and a.id_user = '$idUsuario'
         where
         	s.id = '$idRestaurante';";
 
