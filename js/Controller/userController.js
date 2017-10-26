@@ -29,7 +29,7 @@ $scope.getAllShopInformation = function(){
         }).then(function (response) {
             $scope.cartoesFidelidade = response.data.records[0];
             $scope.restaurantesProximos = response.data.records[1];
-            console.log(response);
+            console.log($scope.cartoesFidelidade);
             
             $scope.isLoading = false;
         });

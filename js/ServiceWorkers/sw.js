@@ -1,10 +1,10 @@
-var CACHE_NAME = 'static-v2';
+var CACHE_NAME = 'static-v0.0.0.0.1';
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       return cache.addAll([
-        '/manifest.json',
+        '../../manifest.json',
       ]);
     })
   )

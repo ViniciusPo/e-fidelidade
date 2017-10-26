@@ -23,14 +23,18 @@ $sql = "Select
         	SUM(a.points) as pontosUser,
         	b.id,
         	b.name,
-            b.NumberOfPointsToBonus,
-            b.Image,
-            b.Bonus
+        	b.NumberOfPointsToBonus,
+        	b.Image,
+        	b.Bonus
         from tb_resgiter_benefits as a
         	inner join tb_shop as b on a.id_shop = b.id
         where
-        	a.id_user = '$idUsuario' and
-            a.isActive = 1;";
+        	a.id_user = 1 and
+        	a.isActive = 1
+        group by
+        	b.id
+        order by
+        	max(a.Registration_date) DESC";
 
 $resultado = $conn->query($sql);
 
