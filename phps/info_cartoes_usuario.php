@@ -29,7 +29,7 @@ $sql = "Select
         from tb_register_benefits as a
         	inner join tb_shop as b on a.id_shop = b.id
         where
-        	a.id_user = 1 and
+        	a.id_user = " .  $idUsuario . " and
         	a.isActive = 1
         group by
         	b.id

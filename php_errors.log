@@ -209,3 +209,15 @@
 [20-Oct-2017 22:33:00 UTC] PHP Stack trace:
 [20-Oct-2017 22:33:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/getClientCode.php:0
 [20-Oct-2017 22:33:00 UTC] PHP   2. pg_fetch_assoc() /home/ubuntu/workspace/phps/getClientCode.php:24
+[27-Oct-2017 00:14:05 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 41
+[27-Oct-2017 00:14:05 UTC] PHP Stack trace:
+[27-Oct-2017 00:14:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[27-Oct-2017 00:15:09 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 41
+[27-Oct-2017 00:15:09 UTC] PHP Stack trace:
+[27-Oct-2017 00:15:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[27-Oct-2017 00:15:20 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 41
+[27-Oct-2017 00:15:20 UTC] PHP Stack trace:
+[27-Oct-2017 00:15:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[27-Oct-2017 00:17:15 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 41
+[27-Oct-2017 00:17:15 UTC] PHP Stack trace:
+[27-Oct-2017 00:17:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
