@@ -39,10 +39,9 @@
 	
 	<script src="/js/menu.js"></script>
 	
-	<script src="/js/ServiceWorkers/serviceWorker.js"></script>
-	
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.1/sweetalert2.all.min.js"></script>
+	
+	<script src="/js/ServiceWorkers/serviceWorker.js"></script>
 	
 	
 	<link rel="manifest" href="/manifest.json">
