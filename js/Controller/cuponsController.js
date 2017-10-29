@@ -34,7 +34,7 @@ $scope.popupQRCode= function(code){
     $('#codigo').text(code);
     
     jQuery('#qrcode').qrcode({
-        text	: codigo ,
+        text	: code ,
         width   : "200",
         height  : "200"
     })
