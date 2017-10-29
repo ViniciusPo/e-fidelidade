@@ -39,7 +39,6 @@ $scope.getAllShopInformation = function(){
     
 };
 
-
 $scope.paginaRestaurante = function(idDoRestaurante){
     $window.location.href = "/tela_restaurante.html?idRestaurante="+idDoRestaurante+"&idUsuario="+$scope.idUsuario;
 }
@@ -48,6 +47,36 @@ $scope.goToQrCode = function(){
     $window.location.href = "/client_QRCode.php?idUsuario="+$scope.idUsuario;
 }
 
+$scope.goToCupons = function(){
+    $window.location.href = "/cupons.html?idUsuario=" + $scope.idUsuario;
+}
+
+$scope.gerarCupom = function(idDoRestaurante,numeroPontosRestaurante){
+    console.log(idDoRestaurante + "\n" + $scope.idUsuario + "\n" + numeroPontosRestaurante);
+    
+    $http({
+          method: 'POST',
+          url: 'phps/gerarCupom.php',
+          data : {  'idShop': idDoRestaurante,
+                    'idUsuario': $scope.idUsuario,
+                    'numPontosRestaurante':numeroPontosRestaurante
+          },
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        }).then(function (response) {
+            $scope.MensagemRetorno = response.data;
+            $scope.isLoading = false;
+            
+            //alert
+            swal({
+              position: 'center',
+              type: 'success',
+              title: $scope.MensagemRetorno,
+              showConfirmButton: false,
+              timer: 1500
+            })
+            setTimeout(function(){ $window.location.href = "/cupons.html?idUsuario="+$scope.idUsuario; }, 1500);
+        });
+}
 
 $scope.getAllShopInformation();
     

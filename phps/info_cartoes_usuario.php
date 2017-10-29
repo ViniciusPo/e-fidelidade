@@ -20,21 +20,28 @@ $dataReturn[0] = [];
 $dataReturn[1] = [];
 
 $sql = "Select 
-        	SUM(a.points) as pontosUser,
+            SUM(a.points) - IFNULL(coupon.points,0) AS pontosUser,
         	b.id,
         	b.name,
         	b.NumberOfPointsToBonus,
         	b.Image,
         	b.Bonus
         from tb_register_benefits as a
-        	inner join tb_shop as b on a.id_shop = b.id
+        inner join tb_shop as b on a.id_shop = b.id
+        left join
+        	( 	SELECT id_user, id_shop, SUM(points) as points
+        		FROM tb_coupon 
+                GROUP BY id_user, id_shop ) as coupon
+        ON
+        	a.id_user = coupon.id_user AND a.id_shop = coupon.id_shop
         where
-        	a.id_user = " .  $idUsuario . " and
+        	a.id_user = ".$idUsuario."  and
         	a.isActive = 1
         group by
         	b.id
         order by
-        	max(a.Registration_date) DESC";
+        	a.Registration_date DESC;
+            ";
 
 $resultado = $conn->query($sql);
 
@@ -46,7 +53,7 @@ while ($row = $resultado->fetch_assoc()) {
                                         ,'imageRestaurante' => "data:image/jpeg;base64," . $row["Image"]
                                         ,'bonusRestaurante' => utf8_encode($row["Bonus"]) 
                                         ,'pontosUsuario' => $row["pontosUser"]
-                                        ,'temBonus' => ($row["pontosUser"] >= $row["NumberOfPointsToBonus"] )
+                                        ,'temBonus' => ($row["pontosUser"] >= $row["NumberOfPointsToBonus"])
                                     ];
     $resultArrayIndex++;
 }

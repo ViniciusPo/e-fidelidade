@@ -27,10 +27,13 @@
 	
 	<link rel="stylesheet" href="/css/FontAwesome/css/font-awesome.min.css">
 	
+	<script src="/js/AngularJs/angular.min.js"></script>
 	<script src="/js/Jquery/jquery-3.2.1.min.js"></script>
 	<script src="/js/Bootstrap/popper.js"></script>
 	<script src="/js/Bootstrap/bootstrap.min.js"></script>
 	
+	<script src="/js/AngularJs/angularApp.js"></script>
+	<script src="/js/Controller/qrCodeController.js"></script>
 	
 	<base href="/client_QRCode.php"/>
 	
@@ -60,13 +63,17 @@
     
     <div class="sidebar">
         <ul class="list_menu">
-        	<li>
+        	<li ng-click="goToHome()">
                 <img src="/img/icon_home.png" title="Home" width="25" height="25">
                 <a href="#">Home</a>
             </li>
             <li>
                 <img src="/img/qr_code_icon.png" title="QR Code" width="25" height="25">
                 <a href="client_QRCode.php">QR Code</a>
+            </li>
+            <li ng-click="goToCupons()">
+                <img src="/img/loyalty-card.png" title="Cupons" width="25" height="25">
+                <a>Seus Cupons</a>
             </li>
             <li>
                 <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">

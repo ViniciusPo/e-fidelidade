@@ -58,7 +58,7 @@ ul li {
 
 .list_menu li a{
     padding:5px 8px;
-    color:#9c27b0;
+    color:#9c27b0 !important;
     display:inline-block;
     text-decoration: none;
     border-bottom: 1px solid rgba(156,39,176,.2);

@@ -221,3 +221,16 @@
 [27-Oct-2017 00:17:15 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cartoes_usuario.php on line 41
 [27-Oct-2017 00:17:15 UTC] PHP Stack trace:
 [27-Oct-2017 00:17:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cartoes_usuario.php:0
+[29-Oct-2017 16:33:49 UTC] PHP Parse error:  syntax error, unexpected '$resultado' (T_VARIABLE) in /home/ubuntu/workspace/phps/info_cupons.php on line 28
+[29-Oct-2017 16:34:06 UTC] PHP Parse error:  syntax error, unexpected '$resultado' (T_VARIABLE) in /home/ubuntu/workspace/phps/info_cupons.php on line 28
+[29-Oct-2017 16:34:11 UTC] PHP Parse error:  syntax error, unexpected '$resultado' (T_VARIABLE) in /home/ubuntu/workspace/phps/info_cupons.php on line 28
+[29-Oct-2017 16:35:40 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/phps/info_cupons.php on line 31
+[29-Oct-2017 16:36:17 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cupons.php on line 38
+[29-Oct-2017 16:36:17 UTC] PHP Stack trace:
+[29-Oct-2017 16:36:17 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cupons.php:0
+[29-Oct-2017 19:38:10 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cupons.php on line 32
+[29-Oct-2017 19:38:10 UTC] PHP Stack trace:
+[29-Oct-2017 19:38:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cupons.php:0
+[29-Oct-2017 19:38:38 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cupons.php on line 32
+[29-Oct-2017 19:38:38 UTC] PHP Stack trace:
+[29-Oct-2017 19:38:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cupons.php:0

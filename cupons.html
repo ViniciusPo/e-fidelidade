@@ -33,30 +33,28 @@
 	<script src="/js/Bootstrap/bootstrap.min.js"></script>
 	
 	<script src="/js/AngularJs/angularApp.js"></script>
-	<script src="/js/Controller/userController.js"></script>
+	<script src="/js/Controller/cuponsController.js"></script>
+	
+	<script type="text/javascript" src="/js/QRCodeGenerator/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/js/QRCodeGenerator/qrcode.js"></script>
 	
 	<base href="/main_client.php"/>
 	
 	<script src="/js/menu.js"></script>
 	
-	<script src="/js/ServiceWorkers/serviceWorker.js"></script>
-	
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.1/sweetalert2.all.min.js"></script>
 	
-	
+	<script src="/js/ServiceWorkers/serviceWorker.js"></script>
+
+
 	<link rel="manifest" href="/manifest.json">
 	
 
 </head>
 
-<body ng-app="myApp" ng-controller="userController">
-	
-	<div id="loading" ng-show="isLoading">
-		<img id="loading-image" src="/img/Facebook.gif" alt="Loading..." />
-	</div>
-	
-	<header>
+<body ng-app="myApp" ng-controller="cuponsController">
+    
+    <header>
 		<button class="sidebarBtn">
             <span></span>
         </button>
@@ -65,13 +63,13 @@
     
     <div class="sidebar">
         <ul class="list_menu">
-        	<li>
+        	<li ng-click="goToHome()">
                 <img src="/img/icon_home.png" title="Home" width="25" height="25">
-                <a href="#">Home</a>
+                <a>Home</a>
             </li>
-            <li>
+            <li ng-click="goToQrCode()">
                 <img src="/img/qr_code_icon.png" title="QR Code" width="25" height="25">
-                <a ng-click="goToQrCode()" href="client_QRCode.php">QR Code</a>
+                <a href="client_QRCode.php">QR Code</a>
             </li>
             <li ng-click="goToCupons()">
                 <img src="/img/loyalty-card.png" title="Cupons" width="25" height="25">
@@ -83,77 +81,35 @@
             </li>
         </ul>
     </div>
-
-
+    
     <div class="main-content">
-
-        <!-- You only need this form and the form-basic.css -->
-
         <form class="form-basic" method="post" action="#">
-
+            
             <div class="form-title-row">
-                <h1>Seus cartões</h1>
+                <h1>Seus cupons</h1>
             </div>
-			<div class="form-row col-md-12" ng-hide="cartoesFidelidade.length < 1 || cartoesFidelidade[0].idRestaurante == null" ng-repeat="x in cartoesFidelidade">
-				<div class="col-md-12 col-12" ng-click="paginaRestaurante(x.idRestaurante)">
-					<div class="bloco-restaurante col-md-12 col-12 row" ng-class="{ 'cartao-completo': x.temBonus }" style="text-align: center;">
+			<div class="form-row col-md-12" ng-hide="cuponsUsuario.length < 1 || cuponsUsuario[0].nomeRestaurante == null" ng-repeat="x in cuponsUsuario">
+				<div class="col-md-12 col-12" ng-click="popupQRCode(x.codigoCupom)">
+					<div class="bloco-restaurante col-md-12 col-12 row" style="text-align: center;">
 						<div class="col-md-3 col-sm-3 col-5">
 							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{x.imageRestaurante}}" />
 						</div>
 						
 						<div class="col-md-7 col-sm-7 col-7">
 							<h4> {{x.nomeRestaurante}}  </h4>
-							<label style="margin-top: 5px;margin-bottom: 15px;color: grey;">{{x.bonusRestaurante}}</label>
+							<label style="margin-top: 5px;margin-bottom: 15px;color: grey;font-size: 20px;color:#00ff00;">{{x.bonusRestaurante}}</label>
 						</div>
 						
-						<div class="col-md-2 col-sm-2 col-12">
-							<label class=""> {{x.pontosUsuario}} </label>
-							<label class="">/</label>
-							<label class=""> {{x.numeroPontosRestaurante}} </label>
-							<i ng-hide="!x.temBonus" ng-click="$event.stopPropagation(); gerarCupom(x.idRestaurante,x.numeroPontosRestaurante)" class="icone-presente fa fa-gift fa-3x" aria-hidden="true" style="color: gold;z-index:2"></i>
-							
-						</div>
+						
 						
 					</div>
                 </div>
             </div>
             
-            <div ng-hide="cartoesFidelidade.length >= 1 && cartoesFidelidade[0].idRestaurante != null">
-            	<h4 style="margin-bottom: 25px; color: red; margin-top: -25px;"> Não tem cartões com pontuação no momento </h4>
-            </div>
-			
-			
-			<div class="form-title-row">
-                <h1>Restaurantes proximos </h1>
+            <div ng-hide="cuponsUsuario.length >= 1 && cuponsUsuario[0].nomeRestaurante != null">
+            	<h4 style="margin-bottom: 25px; color: red; margin-top: -25px;"> Não tem cupons no momento </h4>
             </div>
             
-            
-            <div class="form-row col-md-12" ng-hide="restaurantesProximos.length < 1 || restaurantesProximos[0].idRestaurante == null" ng-repeat="y in restaurantesProximos">
-				<div class="col-md-12 col-12" ng-click="paginaRestaurante(y.idRestaurante)">
-					<div class="bloco-restaurante col-md-12 col-12 row" style="text-align: center;">
-						<div class="col-md-3 col-sm-3 col-5">
-							<img style="width:60px;height: 60px;border-radius: 50px;" ng-src="{{y.imageRestaurante}}" />
-						</div>
-						
-						<div class="col-md-7 col-7">
-							<h4> {{y.nomeRestaurante}}  </h4>
-							<i class="fa fa-gift"></i><label style="margin-top: 5px;margin-bottom: 15px;color: grey;">  {{y.bonusRestaurante}}</label>
-						</div>
-						
-						<div class="col-md-2 col-sm-2 col-12">
-							
-							<label class=""> {{y.distancia | number:3}} km </label>
-							
-						</div>
-						
-					</div>
-                </div>
-            </div>
-
         </form>
-
     </div>
-
 </body>
-
-</html>
