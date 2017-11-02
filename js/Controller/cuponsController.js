@@ -12,9 +12,6 @@ $scope.getCuponsInformation= function(){
       dataType:'json'
     }).then(function (response) {
         $scope.cuponsUsuario = response.data.records;
-        console.log($scope.cuponsUsuario);
-        console.log("Tamanho:" + $scope.cuponsUsuario.length);
-        
         $scope.isLoading = false;
     },function myError(response) {
         console.log("krl:"  + response.statusText);
@@ -47,5 +44,9 @@ $scope.goToCupons = function(){
     $window.location.href = "/cupons.html?idUsuario=" + $scope.idUsuario;
 }
 
+
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
 
 });

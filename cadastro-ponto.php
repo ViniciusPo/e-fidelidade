@@ -67,12 +67,20 @@
                 <img src="/img/ticket.png" title="Carimbar Cartão" width="25" height="25">
                 <a href="#">Carimbar Cartão</a>
             </li>
-            <li>
+            <li ng-click="sair()">
                 <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
-                <a href="index.php">Sair</a>
+                <a>Sair</a>
             </li>
         </ul>
     </div>
+    
+    
+    <div class="tab col-md-12">
+      <button class="tablinks" ng-click="AbrirCadastroPonto()">Cadastrar Ponto</button>
+      <button class="tablinks" ng-click="AbrirResgateBonus()">Resgatar Ponto</button>
+    </div>
+
+    
 
     <div class="col-md-12 cameraParaQrCode hidden" id="app">
         
@@ -82,7 +90,7 @@
         <script type="text/javascript" src="js/QRcode/app.js"></script>
     </div>
 
-    <div class="main-content col-md-12 formularioDeCadastroDePontos">
+    <div class="main-content col-md-12 formularioDeCadastroDePontos tabContent" ng-show="abaCadastroPonto">
 
         <form class="form-basic" method="post">
             
@@ -98,7 +106,7 @@
                 
                 <div class="col-md-3 col-1"></div>
                 <div class="col-md-6 col-10">
-                    <button class="col-md-12 button-qrcode-reader" ng-click="AbrirCamera()">Leitor QrCode </button>
+                    <button class="col-md-12 button-qrcode-reader" ng-click="AbrirCamera()">Ler QR Code </button>
                 </div>
                 <div class="col-md-3 col-1"></div>
                 
@@ -130,7 +138,47 @@
             </div>
 
         </form>
-
+    </div>
+    
+    <div id="telaResgateBonus" ng-show="abaResgateBonus" class="tabContent formularioDeCadastroDePontos">
+        <form class="form-basic" method="post">
+            
+            
+            <div class="form-title-row" style="margin-bottom:20px;">
+                <h1>Resgate Prêmios</h1>
+            </div>
+            
+            <div style="margin-bottom:10px;">
+                <h5>{{MensagemBonus.Mensagem}}</h5>
+            </div>
+            
+            
+            <div class="col-md-12 row" style="margin-bottom:20px; text-align:center;">
+                
+                <div class="col-md-3 col-1"></div>
+                <div class="col-md-6 col-10">
+                    <button class="col-md-12 button-qrcode-reader" ng-click="AbrirCamera()">Ler QR Code </button>
+                </div>
+                <div class="col-md-3 col-1"></div>
+                
+            </div>
+            
+            <div class="form-row">
+                <label>
+                    <span> Código do Cupom: </span>
+                    <input type="text" id="cupom_code" ng-model="codigo_cupom">
+                </label>
+            </div>
+            
+            <div class="col-md-12 col-12 row" style="margin-bottom:40px;">
+                
+                <div class="col-md-3 col-1"></div>
+                <div class="col-md-6 col-10">
+                    <button class="col-md-12" ng-click="cadastrarCupom(codigo_cupom)">Resgatar bônus</button>
+                </div>
+                <div class="col-md-3 col-1"></div>
+            </div>
+        </form>
     </div>
 
 </body>

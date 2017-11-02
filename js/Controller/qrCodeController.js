@@ -16,4 +16,8 @@ $scope.goToCupons = function(){
 }
 
 
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
+
 });

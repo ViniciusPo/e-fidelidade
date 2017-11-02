@@ -76,7 +76,7 @@
                 <img src="/img/loyalty-card.png" title="Cupons" width="25" height="25">
                 <a>Seus Cupons</a>
             </li>
-            <li>
+            <li ng-click="sair()">
                 <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
                 <a href="index.php">Sair</a>
             </li>

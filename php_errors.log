@@ -234,3 +234,24 @@
 [29-Oct-2017 19:38:38 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cupons.php on line 32
 [29-Oct-2017 19:38:38 UTC] PHP Stack trace:
 [29-Oct-2017 19:38:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cupons.php:0
+[02-Nov-2017 00:37:31 UTC] PHP Fatal error:  main(): Cannot write property in /home/ubuntu/workspace/phps/validar_cupom.php on line 21
+[02-Nov-2017 00:37:31 UTC] PHP Stack trace:
+[02-Nov-2017 00:37:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:39:34 UTC] PHP Fatal error:  main(): Cannot write property in /home/ubuntu/workspace/phps/validar_cupom.php on line 21
+[02-Nov-2017 00:39:34 UTC] PHP Stack trace:
+[02-Nov-2017 00:39:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:40:22 UTC] PHP Fatal error:  main(): Cannot write property in /home/ubuntu/workspace/phps/validar_cupom.php on line 21
+[02-Nov-2017 00:40:22 UTC] PHP Stack trace:
+[02-Nov-2017 00:40:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:42:29 UTC] PHP Warning:  Creating default object from empty value in /home/ubuntu/workspace/phps/validar_cupom.php on line 37
+[02-Nov-2017 00:42:29 UTC] PHP Stack trace:
+[02-Nov-2017 00:42:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:43:39 UTC] PHP Warning:  Creating default object from empty value in /home/ubuntu/workspace/phps/validar_cupom.php on line 37
+[02-Nov-2017 00:43:39 UTC] PHP Stack trace:
+[02-Nov-2017 00:43:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:44:06 UTC] PHP Warning:  Creating default object from empty value in /home/ubuntu/workspace/phps/validar_cupom.php on line 37
+[02-Nov-2017 00:44:06 UTC] PHP Stack trace:
+[02-Nov-2017 00:44:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[02-Nov-2017 00:49:03 UTC] PHP Warning:  Creating default object from empty value in /home/ubuntu/workspace/phps/validar_cupom.php on line 37
+[02-Nov-2017 00:49:03 UTC] PHP Stack trace:
+[02-Nov-2017 00:49:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0

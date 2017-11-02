@@ -63,4 +63,56 @@ $scope.QrCodeReaded = function(){
 
 $scope.isLoading = false;
 
+$scope.abaCadastroPonto = true;
+$scope.abaResgateBonus = false;
+
+$scope.AbrirCadastroPonto = function(){
+    $scope.abaCadastroPonto = true;
+    $scope.abaResgateBonus = false;
+    
+    //Escoder camera caso esteja aberta
+    $(".cameraParaQrCode").addClass("hidden");
+    $(".formularioDeCadastroDePontos").removeClass("hidden");
+}
+
+$scope.AbrirResgateBonus = function(){
+    $scope.abaCadastroPonto = false;
+    $scope.abaResgateBonus = true;
+    
+    //Escoder camera caso esteja aberta
+    $(".cameraParaQrCode").addClass("hidden");
+    $(".formularioDeCadastroDePontos").removeClass("hidden");
+}
+
+$scope.cadastrarCupom = function(codigoCupom){
+    
+    if(!codigoCupom){
+        $scope.MensagemBonus = "Insira um código de Cupom.";
+        return;
+    }
+    
+    $scope.isLoading = true;
+    
+    $http({
+          method: 'POST',
+          url: 'phps/validar_cupom.php',
+          data : {  'codigoCupom':codigoCupom},
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+          dataType:'json'
+        }).then(function (response) {
+            $scope.MensagemBonus = response.data;
+            $scope.isLoading = false;
+    });
+    
+    
+    
+};
+
+
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
+
+
+
 });

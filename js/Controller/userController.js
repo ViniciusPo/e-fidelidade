@@ -85,6 +85,11 @@ $scope.gerarCupom = function(idDoRestaurante,numeroPontosRestaurante){
     }
 }
 
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
+
+
 $scope.getAllShopInformation();
     
 });

@@ -14,9 +14,17 @@ var app = new Vue({
       $(".cameraParaQrCode").addClass("hidden");
       $(".formularioDeCadastroDePontos").removeClass("hidden");
       
-      $("#cpf_code").val(content);
-      $("#cpf_code").trigger('input');
-      $("#cpf_code").trigger('change');
+      var telaAtiva = angular.element(document.getElementById('telaResgateBonus')).scope().abaCadastroPonto;
+      
+      if(telaAtiva){
+        $("#cpf_code").val(content);
+        $("#cpf_code").trigger('input');
+        $("#cpf_code").trigger('change');
+      }else{
+        $("#cupom_code").val(content);
+        $("#cupom_code").trigger('input');
+        $("#cupom_code").trigger('change');
+      }
       
     });
     Instascan.Camera.getCameras().then(function (cameras) {
