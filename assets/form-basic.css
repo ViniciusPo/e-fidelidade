@@ -124,6 +124,8 @@ video#preview.active {
     width: 50%;
     margin-top: 15px;
     max-height: 700px;
+    position:absolute;
+    left:25%;
 }
 
 /*	Making the form responsive. Remove this media query
