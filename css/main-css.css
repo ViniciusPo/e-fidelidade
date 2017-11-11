@@ -240,3 +240,16 @@ div.tab button.active {
     color:#00ee00;
 }
 
+
+#curve_chart{
+    width:900px;
+    height:450px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    #curve_chart{
+        width: 360px;
+        height: 205px;
+    }
+}

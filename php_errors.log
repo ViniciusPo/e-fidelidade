@@ -255,3 +255,24 @@
 [02-Nov-2017 00:49:03 UTC] PHP Warning:  Creating default object from empty value in /home/ubuntu/workspace/phps/validar_cupom.php on line 37
 [02-Nov-2017 00:49:03 UTC] PHP Stack trace:
 [02-Nov-2017 00:49:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/validar_cupom.php:0
+[10-Nov-2017 00:32:14 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/info_cupons.php on line 32
+[10-Nov-2017 00:32:14 UTC] PHP Stack trace:
+[10-Nov-2017 00:32:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/info_cupons.php:0
+[10-Nov-2017 21:41:04 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[10-Nov-2017 21:41:04 UTC] PHP Stack trace:
+[10-Nov-2017 21:41:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0
+[11-Nov-2017 16:04:33 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[11-Nov-2017 16:04:33 UTC] PHP Stack trace:
+[11-Nov-2017 16:04:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0
+[11-Nov-2017 16:06:23 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[11-Nov-2017 16:06:23 UTC] PHP Stack trace:
+[11-Nov-2017 16:06:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0
+[11-Nov-2017 16:06:39 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[11-Nov-2017 16:06:39 UTC] PHP Stack trace:
+[11-Nov-2017 16:06:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0
+[11-Nov-2017 16:06:59 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[11-Nov-2017 16:06:59 UTC] PHP Stack trace:
+[11-Nov-2017 16:06:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0
+[11-Nov-2017 16:07:52 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/phps/dadosBI.php on line 63
+[11-Nov-2017 16:07:52 UTC] PHP Stack trace:
+[11-Nov-2017 16:07:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/dadosBI.php:0

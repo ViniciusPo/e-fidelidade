@@ -110,8 +110,13 @@ $scope.cadastrarCupom = function(codigoCupom){
 
 
 $scope.sair = function(){
-    $window.location.href = "/index.php"
+    $window.location.href = "/index.php";
 }
+
+$scope.goToBI = function(){
+        $window.location.href = "/bi.html?idRestaurante="  +  $location.search().idRestaurante + "&nomeRestaurante=" + $location.search().nomeRestaurante;
+}
+
 
 
 

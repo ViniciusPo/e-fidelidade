@@ -67,6 +67,10 @@
                 <img src="/img/ticket.png" title="Carimbar Cartão" width="25" height="25">
                 <a href="#">Carimbar Cartão</a>
             </li>
+            <li ng-click="goToBI()">
+                <i class="fa fa-line-chart fa-lg" aria-hidden="true" style="color:#9c27b0; width:25px; height:25px;    margin-right: 5px; margin-left: 20px; margin-top: 5px; float: left;"></i>
+                <a href="#">Relatórios</a>
+            </li>
             <li ng-click="sair()">
                 <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
                 <a>Sair</a>
@@ -76,8 +80,8 @@
     
     
     <div class="tab col-md-12">
-      <button class="tablinks" ng-click="AbrirCadastroPonto()">Cadastrar Ponto</button>
-      <button class="tablinks" ng-click="AbrirResgateBonus()">Resgatar Ponto</button>
+      <button class="tablinks" ng-click="AbrirCadastroPonto()">Cadastrar Pontos</button>
+      <button class="tablinks" ng-click="AbrirResgateBonus()">Resgate de Bônus</button>
     </div>
 
     
@@ -99,7 +103,7 @@
             </div>
             
             <div class="form-title-row" style="margin-bottom:20px;">
-                <h1>Cadastro de Pontuacao</h1>
+                <h1>Cadastro de Pontos</h1>
             </div>
             
             <div class="col-md-12 row" style="margin-bottom:20px; text-align:center;">
