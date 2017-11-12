@@ -55,6 +55,7 @@ $scope.gerarCupomClick = true;
 
 $scope.gerarCupom = function(idDoRestaurante,numeroPontosRestaurante){
     
+    $scope.isLoading = true;
     if ($scope.gerarCupomClick){
         $scope.gerarCupomClick = false;
         console.log(idDoRestaurante + "\n" + $scope.idUsuario + "\n" + numeroPontosRestaurante);

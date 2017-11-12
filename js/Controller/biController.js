@@ -63,8 +63,8 @@ function carregaMatriz(json){
     var matriz = new Array();
     matriz[0] = ['Dia da semana', 'Cadastro ponto', 'Retirada Bônus'];
     
-    for(var i = 1 ; i < json.length; ++i){
-        matriz[i] = [json[i]['diaSemana'], parseInt(json[i]['qntUsuario']), parseInt(json[i]['qntPremio'])];
+    for(var i = 0 ; i < json.length; ++i){
+        matriz[i+1] = [json[i]['diaSemana'], parseInt(json[i]['qntUsuario']), parseInt(json[i]['qntPremio'])];
     }
     return matriz;
     
