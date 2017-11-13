@@ -1,4 +1,11 @@
-app.controller('loginController', function($scope, $window, $http) { /*global app*/
+app.controller('loginController', function($scope, $window, $http, $location) { /*global app*/
+
+    if ($location.protocol != 'https:')
+    {
+        console.log(window.location.href);
+        //$location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        $window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    }
 
     $scope.login = {};
     $scope.login.name= "45167533830";
@@ -47,6 +54,11 @@ app.controller('loginController', function($scope, $window, $http) { /*global ap
             console.log();
             $window.location.href = '/main_client.php?idUsuario='+response.data;
         });
+    };
+    
+    
+    $scope.CadastroClient= function(){
+        $window.location.href = '/cadastro-client.php';
     };
     
     

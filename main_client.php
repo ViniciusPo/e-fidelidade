@@ -148,6 +148,10 @@
 					</div>
                 </div>
             </div>
+            
+            <div ng-hide="restaurantesProximos.length >= 1">
+            	<h4 style="margin-bottom: 25px; color: red; margin-top: -25px;"> Por favor permita a geolocalização em seu navegador para por ver os restaurantes mais proximos. </h4>
+            </div>
 
         </form>
 

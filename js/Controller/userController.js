@@ -5,18 +5,37 @@ $scope.isLoading = true;
 
 $scope.idUsuario = $location.search().idUsuario;
 
+$scope.GeoLocationIsTAlowed = true;
+
 console.log($scope.idUsuario);
 
 $scope.getAllShopInformation = function(){
     
+    navigator.permissions.query({name: 'geolocation'}).then(function(status) {
+      console.log(status.state);
+      
+      if(status.state == 'denied'){
+          $scope.GeoLocationIsTAlowed = false;
+      }
+      
+    });
     
     if (navigator.geolocation)
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition,showPosition);
     
     
     function showPosition(position) {
-        $scope.latitude = position.coords.latitude;
-        $scope.longitude = position.coords.longitude;
+        
+        console.log('oi');
+        
+        if($scope.GeoLocationIsTAlowed){
+            $scope.latitude = position.coords.latitude;
+            $scope.longitude = position.coords.longitude;
+        }else{
+            $scope.latitude = 0;
+            $scope.longitude = 0;
+        }
+        
         
         $http({
           type: 'GET',
@@ -32,11 +51,11 @@ $scope.getAllShopInformation = function(){
             console.log($scope.cartoesFidelidade);
             
             $scope.isLoading = false;
+            
         });
+        
     }
-    
-    //$scope.isLoading = false;
-    
+
 };
 
 $scope.paginaRestaurante = function(idDoRestaurante){
