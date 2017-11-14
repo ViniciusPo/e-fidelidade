@@ -36,6 +36,8 @@
 	<script src="/js/AngularJs/angularApp.js"></script>
 	<script src="/js/Controller/cadastroPontoController.js"></script>
 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.1/sweetalert2.all.min.js"></script>
+	
 	<base href="/cadastro-ponto.php"/>
 	
 	<script src="/js/menu.js"></script>
@@ -64,15 +66,15 @@
     <div class="sidebar">
         <ul class="list_menu">
             <li>
-                <img src="/img/ticket.png" title="Carimbar Cartão" width="25" height="25">
+                <img src="/img/ticket.png" title="Carimbar Cartão">
                 <a href="#">Carimbar Cartão</a>
             </li>
             <li ng-click="goToBI()">
-                <i class="fa fa-line-chart fa-lg" aria-hidden="true" style="color:#9c27b0; width:25px; height:25px;    margin-right: 5px; margin-left: 20px; margin-top: 5px; float: left;"></i>
+                <i class="fa fa-line-chart fa-lg" aria-hidden="true"></i>
                 <a href="#">Relatórios</a>
             </li>
             <li ng-click="sair()">
-                <img src="/img/sing-out.png" title="Sign Out" width="25" height="25">
+                <img src="/img/sing-out.png" title="Sign Out">
                 <a>Sair</a>
             </li>
         </ul>
@@ -98,12 +100,12 @@
 
         <form class="form-basic" method="post">
             
-            <div style="margin-bottom:10px;">
-                <h5>{{MensagemRetorno}}</h5>
-            </div>
-            
             <div class="form-title-row" style="margin-bottom:20px;">
                 <h1>Cadastro de Pontos</h1>
+            </div>
+            
+            <div style="margin-bottom:10px;">
+                <h5>{{MensagemRetorno}}</h5>
             </div>
             
             <div class="col-md-12 row" style="margin-bottom:20px; text-align:center;">

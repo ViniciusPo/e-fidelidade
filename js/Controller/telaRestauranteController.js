@@ -131,4 +131,25 @@ $scope.getNumber = function(num) {
     return new Array(num);   
 }
 
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
+
+$scope.paginaRestaurante = function(idDoRestaurante){
+    $window.location.href = "/tela_restaurante.html?idRestaurante="+idDoRestaurante+"&idUsuario="+$scope.idUsuario;
+}
+
+$scope.goToQrCode = function(){
+    $window.location.href = "/client_QRCode.php?idUsuario="+$scope.idUsuario;
+}
+
+$scope.goToCupons = function(){
+    $window.location.href = "/cupons.html?idUsuario=" + $scope.idUsuario;
+}
+
+$scope.goToHome = function(){
+    $window.location.href = "/main_client.php?idUsuario=" + $scope.idUsuario;
+}
+
+
 });
