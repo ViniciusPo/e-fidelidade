@@ -295,8 +295,3 @@
 [13-Nov-2017 01:51:51 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/phps/cadastrar-cliente.php on line 54
 [13-Nov-2017 01:51:51 UTC] PHP Stack trace:
 [13-Nov-2017 01:51:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/cadastrar-cliente.php:0
-<<<<<<< HEAD
-[13-Nov-2017 01:51:51 UTC] PHP   2. generateRandomString($length = *uninitialized*) /home/ubuntu/workspace/phps/cadastrar-cliente.php:30
-=======
-[13-Nov-2017 01:51:51 UTC] PHP   2. generateRandomString($length = *uninitialized*) /home/ubuntu/workspace/phps/cadastrar-cliente.php:30
->>>>>>> ba93cec1973cb84c4eef27e631ea9caa9b916a66
