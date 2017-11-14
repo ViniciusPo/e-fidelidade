@@ -32,7 +32,7 @@ VALUES($idClient,$idShop,1,NOW(),$numPontos);";
 if ($conn->query($sqlInsert) === TRUE) {
     echo "Cliente $nomeClient ganhou $numPontos pontos";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo 'CPF ou código inválido!';
 }
 
 ?>

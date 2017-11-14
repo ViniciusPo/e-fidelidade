@@ -5,16 +5,27 @@ $scope.isLoading = true;
 $scope.idUsuario = $location.search().idUsuario;
 $scope.idRestaurante = $location.search().idRestaurante;
 
+$scope.GeoLocationIsTAlowed = true;
+
+navigator.permissions.query({name: 'geolocation'}).then(function(status) {
+  
+  if(status.state == 'denied'){
+      $scope.GeoLocationIsTAlowed = false;
+  }
+  
+});
+
 $scope.getShopInformation = function(){
     
     if (navigator.geolocation)
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition, showPosition);
+    
+     
+    
     
     
     function showPosition(position) {
-        $scope.latitude = position.coords.latitude;
-        $scope.longitude = position.coords.longitude;
-    
+        
         $http({
           type: 'GET',
           url: 'phps/info_restaurante.php',
@@ -23,9 +34,7 @@ $scope.getShopInformation = function(){
           },
           dataType:'json'
         }).then(function (response) {
-            
-            console.log(response);
-            
+          
             $scope.nomeRestaurante = response.data.records[0].nomeRestaurante;
             $scope.imageRestaurante = response.data.records[0].imageRestaurante.replace(/(\r\n|\n|\r)/gm,"");
             $scope.enderecoRestaurante = response.data.records[0].enderecoRestaurante;
@@ -72,8 +81,17 @@ $scope.getShopInformation = function(){
             
             
             
+            if($scope.GeoLocationIsTAlowed){
+                $scope.latitude = position.coords.latitude;
+                $scope.longitude = position.coords.longitude;
+                myMap();
+                
+            }else{
+                $scope.latitude = 0;
+                $scope.longitude = 0;
+            }
             
-            myMap();
+            
             $scope.isLoading = false;
         
         });
@@ -93,10 +111,6 @@ function myMap() {
     
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
     directionsDisplay.setMap(map);
-    //var marker = new google.maps.Marker({
-     // position: {lat: Number($scope.latitudeRestaurante), lng: Number($scope.longitudeRestaurante)},
-      //map: map
-    //});
     
     directionsService.route({
       origin: {lat: Number($scope.latitude), lng: Number($scope.longitude)},
@@ -116,5 +130,26 @@ $scope.getShopInformation();
 $scope.getNumber = function(num) {
     return new Array(num);   
 }
+
+$scope.sair = function(){
+    $window.location.href = "/index.php"
+}
+
+$scope.paginaRestaurante = function(idDoRestaurante){
+    $window.location.href = "/tela_restaurante.html?idRestaurante="+idDoRestaurante+"&idUsuario="+$scope.idUsuario;
+}
+
+$scope.goToQrCode = function(){
+    $window.location.href = "/client_QRCode.php?idUsuario="+$scope.idUsuario;
+}
+
+$scope.goToCupons = function(){
+    $window.location.href = "/cupons.html?idUsuario=" + $scope.idUsuario;
+}
+
+$scope.goToHome = function(){
+    $window.location.href = "/main_client.php?idUsuario=" + $scope.idUsuario;
+}
+
 
 });

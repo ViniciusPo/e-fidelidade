@@ -5,18 +5,32 @@ $scope.isLoading = true;
 
 $scope.idUsuario = $location.search().idUsuario;
 
-console.log($scope.idUsuario);
+$scope.GeoLocationIsTAlowed = true;
 
 $scope.getAllShopInformation = function(){
     
+    navigator.permissions.query({name: 'geolocation'}).then(function(status) {
+     
+      if(status.state == 'denied'){
+          $scope.GeoLocationIsTAlowed = false;
+      }
+      
+    });
     
     if (navigator.geolocation)
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition,showPosition);
     
     
     function showPosition(position) {
-        $scope.latitude = position.coords.latitude;
-        $scope.longitude = position.coords.longitude;
+         
+        if($scope.GeoLocationIsTAlowed){
+            $scope.latitude = position.coords.latitude;
+            $scope.longitude = position.coords.longitude;
+        }else{
+            $scope.latitude = 0;
+            $scope.longitude = 0;
+        }
+        
         
         $http({
           type: 'GET',
@@ -29,14 +43,13 @@ $scope.getAllShopInformation = function(){
         }).then(function (response) {
             $scope.cartoesFidelidade = response.data.records[0];
             $scope.restaurantesProximos = response.data.records[1];
-            console.log($scope.cartoesFidelidade);
-            
+           
             $scope.isLoading = false;
+            
         });
+        
     }
-    
-    //$scope.isLoading = false;
-    
+
 };
 
 $scope.paginaRestaurante = function(idDoRestaurante){
@@ -58,7 +71,6 @@ $scope.gerarCupom = function(idDoRestaurante,numeroPontosRestaurante){
     $scope.isLoading = true;
     if ($scope.gerarCupomClick){
         $scope.gerarCupomClick = false;
-        console.log(idDoRestaurante + "\n" + $scope.idUsuario + "\n" + numeroPontosRestaurante);
         
         $http({
               method: 'POST',

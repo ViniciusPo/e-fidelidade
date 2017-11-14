@@ -68,9 +68,9 @@
                 <img src="/img/icon_home.png" title="Home" width="25" height="25">
                 <a href="#">Home</a>
             </li>
-            <li>
+            <li ng-click="goToQrCode()">
                 <img src="/img/qr_code_icon.png" title="QR Code" width="25" height="25">
-                <a ng-click="goToQrCode()" href="client_QRCode.php">QR Code</a>
+                <a href="client_QRCode.php">QR Code</a>
             </li>
             <li ng-click="goToCupons()">
                 <img src="/img/loyalty-card.png" title="Cupons" width="25" height="25">
@@ -113,6 +113,29 @@
 							
 						</div>
 						
+						<div style="    width: 100%;">
+							<div style="float:right;">
+			                    <label>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                    </label>    
+			                </div>
+			                
+			                <div style="float:right; margin-right:10px;">
+			                    <label> 
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:#c1c1c1"></i>
+			                    </label>    
+			                </div>
+							
+						</div>
+						
 					</div>
                 </div>
             </div>
@@ -147,6 +170,10 @@
 						
 					</div>
                 </div>
+            </div>
+            
+            <div ng-hide="restaurantesProximos.length >= 1">
+            	<h4 style="margin-bottom: 25px; color: red; margin-top: -25px;"> Por favor permita a geolocalização em seu navegador para por ver os restaurantes mais proximos. </h4>
             </div>
 
         </form>

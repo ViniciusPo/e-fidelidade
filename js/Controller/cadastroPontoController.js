@@ -41,6 +41,19 @@ $scope.cadastrarPontuacao = function(pontos){
         }).then(function (response) {
             $scope.MensagemRetorno = response.data;
             $scope.isLoading = false;
+            if($scope.MensagemRetorno == "CPF ou código inválido!"){
+                swal(
+                  'Oops...',
+                  'CPF ou código inválido!',
+                  'error'
+                )
+            }else{
+                swal(
+                  'Sucesso!',
+                  $scope.MensagemRetorno,
+                  'success'
+                )
+            }
         });
     
 };
@@ -88,6 +101,11 @@ $scope.cadastrarCupom = function(codigoCupom){
     
     if(!codigoCupom){
         $scope.MensagemBonus = "Insira um código de Cupom.";
+        swal(
+          'Oops...',
+          'Insira um cupom!',
+          'error'
+        )
         return;
     }
     
@@ -101,6 +119,19 @@ $scope.cadastrarCupom = function(codigoCupom){
           dataType:'json'
         }).then(function (response) {
             $scope.MensagemBonus = response.data;
+            if ($scope.MensagemBonus.validadeCupom){
+                swal(
+                  'Sucesso!',
+                  'Cliente têm direito a um prêmio!',
+                  'success'
+                )
+            } else{
+                swal(
+                  'Oops...',
+                  'Cupom inválido!',
+                  'error'
+                )
+            }
             $scope.isLoading = false;
     });
     
