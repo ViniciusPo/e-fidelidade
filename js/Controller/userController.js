@@ -7,13 +7,10 @@ $scope.idUsuario = $location.search().idUsuario;
 
 $scope.GeoLocationIsTAlowed = true;
 
-console.log($scope.idUsuario);
-
 $scope.getAllShopInformation = function(){
     
     navigator.permissions.query({name: 'geolocation'}).then(function(status) {
-      console.log(status.state);
-      
+     
       if(status.state == 'denied'){
           $scope.GeoLocationIsTAlowed = false;
       }
@@ -25,9 +22,7 @@ $scope.getAllShopInformation = function(){
     
     
     function showPosition(position) {
-        
-        console.log('oi');
-        
+         
         if($scope.GeoLocationIsTAlowed){
             $scope.latitude = position.coords.latitude;
             $scope.longitude = position.coords.longitude;
@@ -48,8 +43,7 @@ $scope.getAllShopInformation = function(){
         }).then(function (response) {
             $scope.cartoesFidelidade = response.data.records[0];
             $scope.restaurantesProximos = response.data.records[1];
-            console.log($scope.cartoesFidelidade);
-            
+           
             $scope.isLoading = false;
             
         });
@@ -77,7 +71,6 @@ $scope.gerarCupom = function(idDoRestaurante,numeroPontosRestaurante){
     $scope.isLoading = true;
     if ($scope.gerarCupomClick){
         $scope.gerarCupomClick = false;
-        console.log(idDoRestaurante + "\n" + $scope.idUsuario + "\n" + numeroPontosRestaurante);
         
         $http({
               method: 'POST',

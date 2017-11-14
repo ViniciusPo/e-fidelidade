@@ -113,6 +113,29 @@
 							
 						</div>
 						
+						<div style="    width: 100%;">
+							<div style="float:right;">
+			                    <label>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:green"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                        <i class="fa fa-usd" aria-hidden="true" style="color:#c1c1c1"></i>
+			                    </label>    
+			                </div>
+			                
+			                <div style="float:right; margin-right:10px;">
+			                    <label> 
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:gold"></i>
+			                        <i class="fa fa-star" aria-hidden="true" style="color:#c1c1c1"></i>
+			                    </label>    
+			                </div>
+							
+						</div>
+						
 					</div>
                 </div>
             </div>

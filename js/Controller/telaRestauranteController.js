@@ -8,7 +8,6 @@ $scope.idRestaurante = $location.search().idRestaurante;
 $scope.GeoLocationIsTAlowed = true;
 
 navigator.permissions.query({name: 'geolocation'}).then(function(status) {
-  console.log(status.state);
   
   if(status.state == 'denied'){
       $scope.GeoLocationIsTAlowed = false;
@@ -35,9 +34,7 @@ $scope.getShopInformation = function(){
           },
           dataType:'json'
         }).then(function (response) {
-            
-            console.log(response);
-            
+          
             $scope.nomeRestaurante = response.data.records[0].nomeRestaurante;
             $scope.imageRestaurante = response.data.records[0].imageRestaurante.replace(/(\r\n|\n|\r)/gm,"");
             $scope.enderecoRestaurante = response.data.records[0].enderecoRestaurante;

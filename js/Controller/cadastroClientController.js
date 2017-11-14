@@ -20,7 +20,6 @@ app.controller('cadastroClientController', function($scope, $window, $http, $loc
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
             dataType:'json'
             }).then(function (response) {
-                console.log(response)
                 $scope.mensagem = response.data;
         });
         
@@ -51,7 +50,6 @@ app.controller('cadastroClientController', function($scope, $window, $http, $loc
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            console.log();
             $window.location.href = '/main_client.php?idUsuario='+response.data;
         });
     };

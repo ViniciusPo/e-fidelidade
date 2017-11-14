@@ -1,9 +1,8 @@
 app.controller('loginController', function($scope, $window, $http, $location) { /*global app*/
 
-    if ($location.protocol != 'https:')
-    {
-        console.log(window.location.href);
-        //$location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    if ((window.location.href).indexOf('https') !== -1){
+        
+    }else{
         $window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
     }
 
@@ -51,7 +50,6 @@ app.controller('loginController', function($scope, $window, $http, $location) { 
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            console.log();
             $window.location.href = '/main_client.php?idUsuario='+response.data;
         });
     };
