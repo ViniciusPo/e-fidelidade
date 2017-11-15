@@ -48,10 +48,12 @@ $scope.cadastrarPontuacao = function(pontos){
                   'error'
                 )
             }else{
-                swal(
-                  'Sucesso!',
-                  $scope.MensagemRetorno,
-                  'success'
+                swal({
+                  title:'Sucesso!',
+                  text: $scope.MensagemRetorno,
+                  type:'success',
+                  showConfirmButton: false,
+                  timer: 2000}
                 )
             }
         });
@@ -120,11 +122,13 @@ $scope.cadastrarCupom = function(codigoCupom){
         }).then(function (response) {
             $scope.MensagemBonus = response.data;
             if ($scope.MensagemBonus.validadeCupom){
-                swal(
-                  'Sucesso!',
-                  'Cliente têm direito a um prêmio!',
-                  'success'
-                )
+                swal({
+                  title:'Sucesso!',
+                  text:'Cliente têm direito a um prêmio!',
+                  type:'success',
+                  showConfirmButton: false,
+                  timer: 2000
+                })
             } else{
                 swal(
                   'Oops...',
