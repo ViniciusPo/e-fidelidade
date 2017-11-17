@@ -38,7 +38,16 @@ app.controller('loginController', function($scope, $window, $http, $location) { 
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            $window.location.href = "/cadastro-ponto.php?idRestaurante="+response.data.records.id+"&nomeRestaurante="+response.data.records.name;
+            if(parseInt(response.data.records.id) != -1){
+                $window.location.href = "/cadastro-ponto.php?idRestaurante="+response.data.records.id+"&nomeRestaurante="+response.data.records.name;
+            }else{
+                $scope.isLoading = false;
+                swal(
+                  'Oops...',
+                  'Login ou senha incorretos!',
+                  'error'
+                );
+            }
         });
     };
     
@@ -50,7 +59,17 @@ app.controller('loginController', function($scope, $window, $http, $location) { 
           params : {login:login.name},
           dataType:'json'
         }).then(function (response) {
-            $window.location.href = '/main_client.php?idUsuario='+response.data;
+            var id = parseInt(response.data);
+            if(id != -1){
+                 $window.location.href = '/main_client.php?idUsuario='+response.data;
+            }else{
+                $scope.isLoading = false;
+                swal(
+                  'Oops...',
+                  'Login ou senha incorreto!',
+                  'error'
+                );
+            }
         });
     };
     

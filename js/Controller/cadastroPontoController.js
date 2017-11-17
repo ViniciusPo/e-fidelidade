@@ -48,6 +48,7 @@ $scope.cadastrarPontuacao = function(pontos){
                   'error'
                 )
             }else{
+                $("#cpf_code").val("");
                 swal({
                   title:'Sucesso!',
                   text: $scope.MensagemRetorno,
@@ -122,6 +123,7 @@ $scope.cadastrarCupom = function(codigoCupom){
         }).then(function (response) {
             $scope.MensagemBonus = response.data;
             if ($scope.MensagemBonus.validadeCupom){
+                $("#cupom_code").val("");
                 swal({
                   title:'Sucesso!',
                   text:'Cliente têm direito a um prêmio!',

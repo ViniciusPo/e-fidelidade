@@ -23,6 +23,10 @@ while ($row = $resultado->fetch_assoc()) {
     $idDoCaraQueCadastro = $row["id"];
 }
 
+if( $idDoCaraQueCadastro == NULL ){
+    $idDoCaraQueCadastro = -1;
+}
+
 header('Content-Type: application/json');
 echo $idDoCaraQueCadastro;
 

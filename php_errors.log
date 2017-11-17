@@ -294,4 +294,8 @@
 [13-Nov-2017 01:49:10 UTC] PHP   2. generateRandomString($length = *uninitialized*) /home/ubuntu/workspace/phps/cadastrar-cliente.php:30
 [13-Nov-2017 01:51:51 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/phps/cadastrar-cliente.php on line 54
 [13-Nov-2017 01:51:51 UTC] PHP Stack trace:
-[13-Nov-2017 01:51:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/cadastrar-cliente.php:0
+[13-Nov-2017 01:51:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/phps/cadastrar-cliente.php:0[17-Nov-2017 01:50:37 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/phps/login.php on line 28
+[17-Nov-2017 01:53:16 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/phps/login.php on line 28
+[17-Nov-2017 01:53:19 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/phps/login.php on line 28
+[17-Nov-2017 01:53:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/phps/login.php on line 28
+[17-Nov-2017 01:53:38 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/phps/login.php on line 28

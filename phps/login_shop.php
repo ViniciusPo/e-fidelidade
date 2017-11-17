@@ -21,7 +21,12 @@ while ($row = $resultado->fetch_assoc()) {
     $nomeRestaurante = $row["Name"];
 }
 
-$dataReturn = ['id' => $idDoCaraQueCadastro , 'name' => utf8_encode($nomeRestaurante)];
+$dataReturn;
+if ($idDoCaraQueCadastro != NULL)
+    $dataReturn = ['id' => $idDoCaraQueCadastro , 'name' => utf8_encode($nomeRestaurante)];
+else {
+    $dataReturn = ['id' => -1 , 'name' => utf8_encode('Não encontrado')];
+}
 
 //$jsonEncodeReturn = json_encode(["records"=>$dataReturn], JSON_UNESCAPED_UNICODE);
 
