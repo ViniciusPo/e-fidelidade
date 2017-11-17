@@ -24,8 +24,15 @@ $scope.getAllShopInformation = function(){
     function showPosition(position) {
          
         if($scope.GeoLocationIsTAlowed){
-            $scope.latitude = position.coords.latitude;
-            $scope.longitude = position.coords.longitude;
+            
+            if(position.POSITION_UNAVAILABLE || position.TIMEOUT || position.UNKNOWN_ERROR){
+                $scope.latitude = 0;
+                $scope.longitude = 0;  
+            }else{
+               $scope.latitude = position.coords.latitude;
+               $scope.longitude = position.coords.longitude;  
+            }
+            
         }else{
             $scope.latitude = 0;
             $scope.longitude = 0;

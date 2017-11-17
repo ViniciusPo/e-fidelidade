@@ -7,8 +7,8 @@ app.controller('loginController', function($scope, $window, $http, $location) { 
     }
 
     $scope.login = {};
-    $scope.login.name= "45167533830";
-    $scope.login.password= "SenhaNaoFunciona";
+    $scope.login.name= "";
+    $scope.login.password= "";
     $scope.isLoading = false;
     
     

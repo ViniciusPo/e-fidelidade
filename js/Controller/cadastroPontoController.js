@@ -58,6 +58,8 @@ $scope.cadastrarPontuacao = function(pontos){
                 )
             }
         });
+        
+        $scope.pontos.code = '';
     
 };
 
