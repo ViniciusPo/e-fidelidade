@@ -44,6 +44,11 @@ $scope.goToCupons = function(){
     $window.location.href = "/cupons.html?idUsuario=" + $scope.idUsuario;
 }
 
+$scope.goToQrCode = function(){
+    $window.location.href = "/client_QRCode.php?idUsuario="+$scope.idUsuario;
+}
+
+
 
 $scope.sair = function(){
     $window.location.href = "/index.php"
