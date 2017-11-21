@@ -26,10 +26,8 @@ app.controller('biController', function($scope, $window, $http, $location) { /*g
             };
             
             var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-            
             chart.draw(data, options);
         }
-        
         
         //console.log($scope.dados);
         
@@ -38,6 +36,63 @@ app.controller('biController', function($scope, $window, $http, $location) { /*g
         
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
+        
+        
+        
+        // Grafico pizza -----------------------------------------
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChartPie);
+
+        function drawChartPie() {
+            var data = google.visualization.arrayToDataTable([
+              ['Sexo', 'Porcentual'],
+              ['Homens', 60],
+              ['Mulheres', 40]
+            ]);
+    
+            var options = {
+              title: ''
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+       //------------------------------------------------------------
+       
+       //Grafico colunas
+       
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawColumnChart);
+        function drawColumnChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Faixa de idade", "Idade", { role: "style" } ],
+            ["0 - 12", 2, "#ffff00"],
+            ["12 - 18", 10, "#40ff00"],
+            ["19 - 24", 19, "#00ffff"],
+            ["25 - 30", 22, "color:#0080ff"],
+            ["31 - 40", 25, "#8000ff"],
+            ["41 - 55", 21, "#ff00ff"],
+            ["56 - 70", 13, "#ff0080"],
+            ["71 +", 7, "#ff0000"],
+            
+          ]);
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          var options = {
+            title: "",
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart"));
+          chart.draw(view, options);
+      }
+      //------------------------------------------------------------------  
         
     });
     
